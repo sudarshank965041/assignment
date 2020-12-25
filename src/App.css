@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+ul li {
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+ul li span:first-child{
+  font-size: 20px;
+  font-weight: 500;
+  padding-right: 15px;
+}
+
+
