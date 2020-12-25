@@ -4,6 +4,7 @@ import Login from './components/Login';
 import RepoList from './components/RepoList';
 import authService from "./services/authService"
 import Dashboard from "./components/Dashboard"
+import RepoDetails from './components/RepoDetails';
 
 function Routes() {
   return (
@@ -45,6 +46,15 @@ function Routes() {
               ) : (
                 <Redirect to='login'></Redirect>
               )
+           }
+        />
+        <Route
+          exact={true}
+          path='/repolist/:owner/:name'
+          render={(e, props) => 
+              <Dashboard>
+                <RepoDetails {...e} data={props} />
+              </Dashboard>
            }
         />
       </Switch>
